@@ -1,0 +1,15 @@
+        <html>
+            <head>
+                <script src="squeak.js"></script>
+                <script>
+const urlParams = new URLSearchParams(window.location.search);
+const myParam = urlParams.get('url');
+                    window.onload = function() {
+                        SqueakJS.runSqueak("myParam", sqCanvas, { /*put options here*/ });
+                    }
+                </script>
+            </head>
+            <body>
+                <canvas id="sqCanvas"></canvas>
+            </body>
+        </html>
