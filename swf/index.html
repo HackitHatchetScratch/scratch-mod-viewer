@@ -1,0 +1,16 @@
+<head>
+<script>
+const urlParams = new URLSearchParams(window.location.search);
+const myParam = urlParams.get('url');
+    window.RufflePlayer = window.RufflePlayer || {};
+    window.addEventListener("load", (event) => {
+        const ruffle = window.RufflePlayer.newest();
+        const player = ruffle.createPlayer();
+        const container = document.getElementById("container");
+        container.appendChild(player);
+        player.load(myParam);
+    });
+</script>
+<script src="path/to/ruffle/ruffle.js"></script>
+  <title>Scratch 2.0 Player</title>
+</head>
